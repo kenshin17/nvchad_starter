@@ -7,6 +7,10 @@ return {
     end,
   },
 
+  {
+    "Asheq/close-buffers.vim",
+    cmd = "Bdelete",
+  },
   -- {
   --   "neovim/nvim-lspconfig",
   --   config = function()
