@@ -16,7 +16,7 @@ local lazy_config = require "configs.lazy"
 -- load plugins
 require("lazy").setup({
   {
-    dir = os.getenv("NVCHAD_DIR"),
+    dir = os.getenv "NVCHAD_DIR",
     lazy = false,
     branch = "v2.5",
     import = "nvchad.plugins",
@@ -38,4 +38,4 @@ vim.schedule(function()
   require "mappings"
 end)
 
-require("myinit")
+require "myinit"

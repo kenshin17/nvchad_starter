@@ -11,6 +11,15 @@ return {
     "Asheq/close-buffers.vim",
     cmd = "Bdelete",
   },
+  {
+    "folke/neodev.nvim",
+    ft = { "lua" },
+    lazy = true,
+    config = function()
+      require("neodev").setup {}
+      require "configs.lspconfig-lua"
+    end,
+  },
   -- {
   --   "neovim/nvim-lspconfig",
   --   config = function()

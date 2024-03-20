@@ -13,26 +13,6 @@ map("n", "<Bslash>", function()
   require("shade").toggle()
 end, { desc = "toggle shade.nvim" })
 
-map("n", "<leader>fm", function()
-  require("conform").format()
-end, { desc = "format with conform" })
-
-map("n", "<leader>lr", "<cmd>LspRestart<CR>", { desc = "format with conform" })
-map("n", "<leader>fi", function()
-  local offset_encoding = vim.lsp.util._get_offset_encoding(0)
-  local params = vim.lsp.util.make_range_params(nil, offset_encoding)
-  params.context = { only = { "source.organizeImports" } }
-  local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, 500)
-  for _, res in pairs(result or {}) do
-    for _, r in pairs(res.result or {}) do
-      if r.edit then
-        vim.lsp.util.apply_workspace_edit(r.edit, offset_encoding)
-      else
-        vim.lsp.buf.execute_command(r.command)
-      end
-    end
-  end
-end, { desc = "Lsp organize imports" })
 
 -- M.nvterm = {
 --   n = {
