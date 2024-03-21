@@ -50,23 +50,8 @@ vim.g.loaded_ruby_provider = nil
 vim.g.loaded_python3_provider = nil
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.python_host_prog = "~/.pyenv/versions/2.7.18/bin/python"
-vim.g.wordmotion_prefix = "<Leader>"
 vim.g.coc_global_extensions = { "coc-flutter" }
 vim.opt.shell = "zsh"
-
-vim.opt.clipboard = "unnamedplus"
-vim.g.clipboard = {
-  name = "lemonade",
-  copy = {
-    ["+"] = { "lemonade", "copy", "--host=127.0.0.1" },
-    ["*"] = { "lemonade", "copy", "--host=127.0.0.1" },
-  },
-  paste = {
-    ["+"] = { "lemonade", "paste", "--host=127.0.0.1" },
-    ["*"] = { "lemonade", "paste", "--host=127.0.0.1" },
-  },
-  cache_enabled = false,
-}
 
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,localoptions"
 vim.g.db_ui_auto_execute_table_helpers = 1

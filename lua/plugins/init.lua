@@ -88,7 +88,8 @@ return {
 
   {
     "chaoren/vim-wordmotion",
-    lazy = false,
+    lazy = true,
+    keys = "ci<leader>w"
   },
 
   {
@@ -101,7 +102,7 @@ return {
       require("hop").setup { keys = "etovxqpdygfblzhckisuran" }
       map("n", "<leader>fj", ":HopPattern <CR>", { desc = "HopPattern" })
     end,
-    keys = "<leader>fj"
+    keys = "<leader>fj",
   },
   {
     "kdheepak/lazygit.nvim",
