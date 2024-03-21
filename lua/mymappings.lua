@@ -49,7 +49,6 @@ map("n", "<leader>de", "<cmd>lua require'dap'.repl.toggle()<cr>", { desc = "Togg
 map("n", "<leader>s", "<esc>:lua require('spectre').open_visual()<CR>", { desc = "Open Search" })
 map("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", { desc = "Search word" })
 
-map("n", "<leader>fj", ":HopPattern <CR>", { desc = "HopPattern" })
 
 map("n", "<leader>ze", ":ZenMode <CR>", { desc = "Toggle ZenMode" })
 

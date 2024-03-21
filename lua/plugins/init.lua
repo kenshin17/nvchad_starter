@@ -1,3 +1,5 @@
+local map = vim.keymap.set
+
 return {
   {
     "stevearc/conform.nvim",
@@ -93,11 +95,13 @@ return {
     "smoka7/hop.nvim",
     version = "*",
     -- cmd = "HopWord",
-    lazy = false,
+    lazy = true,
     config = function()
       -- you can configure Hop the way you like here; see :h hop-config
       require("hop").setup { keys = "etovxqpdygfblzhckisuran" }
+      map("n", "<leader>fj", ":HopPattern <CR>", { desc = "HopPattern" })
     end,
+    keys = "<leader>fj"
   },
   {
     "kdheepak/lazygit.nvim",
@@ -175,7 +179,8 @@ return {
       require("telescope").load_extension "aerial"
       vim.keymap.set("n", "<leader>fc", "<cmd>:Telescope aerial<CR>")
     end,
-    lazy = false,
+    lazy = true,
+    keys = "<leader>fc",
   },
   {
     "alexghergh/nvim-tmux-navigation",
