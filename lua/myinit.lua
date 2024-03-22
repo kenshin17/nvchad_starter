@@ -67,3 +67,5 @@ local db_ui_save_location = os.getenv "SQL_SAVE_LOCATION"
 if db_ui_save_location and db_ui_save_location ~= "" then
   vim.g.db_ui_save_location = db_ui_save_location
 end
+
+require("base46").load_all_highlights()
