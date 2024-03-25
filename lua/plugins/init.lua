@@ -8,13 +8,17 @@ return {
       require "configs.conform"
     end,
   },
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   config = function()
-  --     require("nvchad.configs.lspconfig").defaults()
-  --     require "configs.lspconfig"
-  --   end,
-  -- },
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "pmizio/typescript-tools.nvim",
+    },
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
+    ft = { "lua", "python", "javascript", "typescript" },
+  },
 
   -- {
   -- 	"williamboman/mason.nvim",
@@ -89,7 +93,7 @@ return {
   {
     "chaoren/vim-wordmotion",
     lazy = true,
-    keys = "ci<leader>w"
+    keys = "ci<leader>w",
   },
 
   {
@@ -202,7 +206,7 @@ return {
   },
   {
     "3rd/image.nvim",
-    lazy = false,
+    lazy = true,
     config = function()
       package.path = package.path .. ";" .. vim.fn.expand "$HOME" .. "/.luarocks/share/lua/5.1/?/init.lua;"
       package.path = package.path .. ";" .. vim.fn.expand "$HOME" .. "/.luarocks/share/lua/5.1/?.lua;"
