@@ -99,6 +99,7 @@ lspconfig.jsonls.setup {
 }
 -- typescript
 require("typescript-tools").setup {
+  dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
   on_attach = on_attach,
   on_init = on_init,
 
