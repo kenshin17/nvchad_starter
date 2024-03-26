@@ -22,7 +22,6 @@ local pattern_table = {
   ["groovy"] = { "Jenkinsfile.*" },
   ["bash"] = { ".envrc.*" },
   ["dockerfile"] = { "Dockerfile.*" },
-  ["json"] = { ".*appiumsession.*" },
 }
 
 local function table_map_by_value(data)
@@ -41,6 +40,8 @@ vim.filetype.add {
   extension = {
     strings = "strings",
     conf = "config",
+    hurl = "hurl",
+    appiumsession = "json",
   },
 }
 
