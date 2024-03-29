@@ -240,4 +240,69 @@ return {
       }
     end,
   },
+  -- {
+  --   "nvim-treesitter/nvim-treesitter-context",
+  --   lazy = true,
+  --   opts = {
+  --     throttle = true,
+  --     max_lines = 0,
+  --     patterns = {
+  --       default = {
+  --         "class",
+  --         "function",
+  --         "method",
+  --       },
+  --     },
+  --   },
+  --   event = "LspAttach",
+  --   config = function (_, opts)
+  --     require("treesitter-context").setup(opts)
+  --
+  --     vim.cmd [[
+  --       :hi TreesitterContextLineNumberBottom gui=underline guisp=Grey
+  --       :hi TreesitterContextBottom gui=underline guisp=Grey
+  --     ]]
+  --   end
+  -- },
+  -- {
+  --   "nvimdev/lspsaga.nvim",
+  --   event = "LspAttach",
+  --   config = function()
+  --     require("lspsaga").setup {}
+  --     -- map("n", "K", "<cmd>Lspsaga hover_doc<CR>")
+  --     -- map("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
+  --   end,
+  --   dependencies = {
+  --     "nvim-treesitter/nvim-treesitter", -- optional
+  --     "nvim-tree/nvim-web-devicons", -- optional
+  --   },
+  -- },
+  {
+    "rainbowhxch/beacon.nvim",
+    lazy = false,
+  },
+  {
+    "HiPhish/rainbow-delimiters.nvim",
+    lazy = false,
+  },
+  -- {
+  --   "code-biscuits/nvim-biscuits",
+  --   event = "LspAttach",
+  --   dependencies = {
+  --     "nvim-treesitter/nvim-treesitter",
+  --   },
+  --   config = function()
+  --     require("nvim-biscuits").setup {
+  --       on_events = { "InsertLeave", "CursorHoldI" },
+  --       show_on_start = true, -- defaults to false
+  --     }
+  --     map("n", "<leader>cb", function()
+  --       require("nvim-biscuits").toggle_biscuits()
+  --     end)
+  --     vim.cmd [[
+  --       :hi BiscuitColor ctermfg=blue
+  --       :hi BiscuitColorPython ctermfg=red
+  --     ]]
+  --   end,
+  -- },
 }
