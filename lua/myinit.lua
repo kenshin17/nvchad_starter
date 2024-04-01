@@ -42,6 +42,7 @@ vim.filetype.add {
     conf = "config",
     hurl = "hurl",
     appiumsession = "json",
+    storyboard = "xml",
   },
 }
 
