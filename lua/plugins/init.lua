@@ -285,6 +285,12 @@ return {
     "HiPhish/rainbow-delimiters.nvim",
     lazy = false,
   },
+	{
+		"windwp/nvim-spectre",
+		config = function()
+			require("spectre").setup()
+		end,
+	},
   -- {
   --   "code-biscuits/nvim-biscuits",
   --   event = "LspAttach",
