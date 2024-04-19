@@ -1,4 +1,5 @@
 local map = vim.keymap.set
+local hasLuaRocks = vim.fn.isdirectory(vim.fn.expand "$HOME/.luarocks")
 
 return {
   {
@@ -206,7 +207,7 @@ return {
   },
   {
     "3rd/image.nvim",
-    lazy = true,
+    lazy = not hasLuaRocks,
     config = function()
       package.path = package.path .. ";" .. vim.fn.expand "$HOME" .. "/.luarocks/share/lua/5.1/?/init.lua;"
       package.path = package.path .. ";" .. vim.fn.expand "$HOME" .. "/.luarocks/share/lua/5.1/?.lua;"
@@ -285,12 +286,12 @@ return {
     "HiPhish/rainbow-delimiters.nvim",
     lazy = false,
   },
-	{
-		"windwp/nvim-spectre",
-		config = function()
-			require("spectre").setup()
-		end,
-	},
+  {
+    "windwp/nvim-spectre",
+    config = function()
+      require("spectre").setup()
+    end,
+  },
   -- {
   --   "code-biscuits/nvim-biscuits",
   --   event = "LspAttach",
