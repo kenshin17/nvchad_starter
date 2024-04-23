@@ -292,6 +292,29 @@ return {
       require("spectre").setup()
     end,
   },
+  {
+    "stevearc/oil.nvim",
+    lazy = false,
+    config = function()
+      require("oil").setup {
+        -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
+        -- Set to false if you still want to use netrw.
+        default_file_explorer = true,
+      }
+      map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+    end,
+  },
+  {
+    "Exafunction/codeium.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    config = function()
+      require("codeium").setup {}
+    end,
+  },
   -- {
   --   "code-biscuits/nvim-biscuits",
   --   event = "LspAttach",
