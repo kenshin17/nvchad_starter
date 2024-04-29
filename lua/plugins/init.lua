@@ -164,8 +164,8 @@ return {
         -- optionally use on_attach to set keymaps when aerial has attached to a buffer
         on_attach = function(bufnr)
           -- Jump forwards/backwards with '{' and '}'
-          vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
-          vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+          map("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+          map("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
         end,
         backends = { "treesitter", "lsp", "markdown", "man" },
         -- filter_kind = false,
@@ -183,7 +183,7 @@ return {
       }
       -- vim.keymap.set("n", "<leader>a", "<cmd>AerialNavToggle<CR>")
       require("telescope").load_extension "aerial"
-      vim.keymap.set("n", "<leader>fc", "<cmd>:Telescope aerial<CR>")
+      map("n", "<leader>fc", "<cmd>:Telescope aerial<CR>", { desc = "Toggle Aerial" })
     end,
     lazy = true,
     keys = "<leader>fc",
