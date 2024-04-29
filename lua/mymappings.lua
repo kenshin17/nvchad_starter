@@ -13,7 +13,6 @@ map("n", "<Bslash>", function()
   require("shade").toggle()
 end, { desc = "toggle shade.nvim" })
 
-
 -- M.nvterm = {
 --   n = {
 --     ["<leader>gc"] = {
@@ -34,7 +33,7 @@ end, { desc = "toggle shade.nvim" })
 --   },
 -- }
 
-map("n", "<F7>", ":TagbarToggle <CR>", { desc = "toggle Tag Bar" })
+-- map("n", "<F7>", ":TagbarToggle <CR>", { desc = "toggle Tag Bar" })
 
 map("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", { desc = "Start Debug" })
 map("n", "<F8>", "<cmd>lua require'dap'.step_into()<cr>", { desc = "Step Into" })
@@ -49,7 +48,6 @@ map("n", "<leader>de", "<cmd>lua require'dap'.repl.toggle()<cr>", { desc = "Togg
 map("n", "<leader>s", "<esc>:lua require('spectre').open_visual()<CR>", { desc = "Open Search" })
 map("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", { desc = "Search word" })
 
-
 map("n", "<leader>ze", ":ZenMode <CR>", { desc = "Toggle ZenMode" })
 
 map("n", "<leader>lg", ":LazyGit <CR>", { desc = "Open LazyGit" })
@@ -58,22 +56,6 @@ map("n", "<leader>lz", ":Neogit <CR>", { desc = "Open Neogit" })
 map("n", "<leader>fs", ":Telescope resume <CR>", { desc = "Telescope resume" })
 
 map("n", "<leader>gf", ":Telescope changed_files <cr>", { desc = "Open changed files" })
-
-map("n", "gas", function()
-  require("textcase").current_word "to_snake_case"
-end, {
-  desc = "Convert current word to snake case",
-})
-map("n", "gac", function()
-  require("textcase").current_word "to_camel_case"
-end, {
-  desc = "Convert current word to camel case",
-})
-map("n", "gap", function()
-  require("textcase").current_word "to_pascal_case"
-end, {
-  desc = "Convert current word to pascal case",
-})
 
 map("n", "<leader>me", ":Bdelete other<CR>", { desc = "Close all but this buffer" })
 

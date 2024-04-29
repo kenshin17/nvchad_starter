@@ -68,9 +68,9 @@ return {
   {
     "johmsalas/text-case.nvim", -- after = "ui",
     config = function()
-      -- require("textcase").setup({})
+      require "configs.textcase"
     end,
-    lazy = true,
+    lazy = false,
   },
   {
     "rmagatti/auto-session",
