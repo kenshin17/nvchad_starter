@@ -15,7 +15,7 @@ local lazy_config = require "configs.lazy"
 -- load plugins
 require("lazy").setup({
   {
-    dir = os.getenv "NVCHAD_DIR",
+    dir = vim.fn.stdpath "config" .. "/nvchad",
     lazy = false,
     -- branch = "v2.5",
     import = "nvchad.plugins",
