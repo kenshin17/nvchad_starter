@@ -315,6 +315,26 @@ return {
       require("codeium").setup {}
     end,
   },
+	{
+		"neoclide/coc.nvim",
+		branch = "release",
+		ft = { "dart", "terraform", "tf" },
+		lazy = true,
+		dependencies = {
+			{
+				"dart-lang/dart-vim-plugin",
+			},
+			{
+				"natebosch/vim-lsc",
+			},
+			{
+				"natebosch/vim-lsc-dart",
+			},
+		},
+		config = function()
+			require("configs.coc")
+		end,
+	},
   -- {
   --   "code-biscuits/nvim-biscuits",
   --   event = "LspAttach",
