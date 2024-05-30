@@ -2,7 +2,6 @@
 local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
-local map = vim.keymap.set
 
 local lspconfig = require "lspconfig"
 local servers = {
@@ -181,7 +180,6 @@ for command, lsp_setup in pairs(possible_lsp) do
   end
 end
 
-map("n", "K", vim.lsp.buf.hover)
 --local java_17_home = os.getenv("JAVA_17_HOME")
 --if java_17_home then
 --	local jdtls_path = os.getenv("HOME") .. "/.local/share/nvim/mason/packages/jdtls"

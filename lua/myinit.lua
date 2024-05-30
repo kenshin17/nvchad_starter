@@ -71,3 +71,4 @@ if db_ui_save_location and db_ui_save_location ~= "" then
 end
 
 require("base46").load_all_highlights()
+-- vim.lsp.set_log_level("debug")
