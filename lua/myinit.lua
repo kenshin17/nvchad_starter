@@ -20,8 +20,9 @@ local filename_table = {
 local pattern_table = {
   ["ruby"] = { ".*Fastfile" },
   ["groovy"] = { "Jenkinsfile.*" },
-  ["bash"] = { ".envrc.*" },
+  ["direnv"] = { ".*%.envrc%.*" },
   ["dockerfile"] = { "Dockerfile.*" },
+  ["yaml"] = { ".*%.yml%..*" },
 }
 
 local function table_map_by_value(data)
