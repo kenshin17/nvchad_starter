@@ -13,7 +13,7 @@ if vim.g.neovide then
 end
 
 local filename_table = {
-  ["ruby"] = { "Appfile", "Podfile", "Pluginfile" },
+  ["ruby"] = { "Appfile", "Podfile", "Pluginfile", "Matchfile" },
   ["bash"] = { "env.sample" },
 }
 
