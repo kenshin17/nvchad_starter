@@ -25,7 +25,6 @@ local servers = {
   "rust_analyzer",
   "cmake",
   -- make file
-  "autotools_ls",
   "texlab",
 }
 
@@ -167,6 +166,13 @@ local possible_lsp = {
   end,
   ["sourcekit-lsp"] = function()
     lspconfig.sourcekit.setup {
+      on_init = on_init,
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
+  end,
+  ["autotools-language-server"] = function()
+    lspconfig.autotools_ls.setup {
       on_init = on_init,
       on_attach = on_attach,
       capabilities = capabilities,
