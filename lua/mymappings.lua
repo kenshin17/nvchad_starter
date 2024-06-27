@@ -90,3 +90,5 @@ end, {
   remap = true,
   -- opts = { expr = true },
 })
+
+map("n", "<leader>gb", "<CMD>:G blame<CR>", { desc = "Blame Line" })
