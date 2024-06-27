@@ -17,7 +17,7 @@ require("lazy").setup({
   {
     dir = vim.fn.stdpath "config" .. "/nvchad",
     lazy = false,
-    branch = "rock/2.5",
+    branch = "ken/1.0",
     import = "nvchad.plugins",
     config = function()
       require "options"
